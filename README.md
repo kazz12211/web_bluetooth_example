@@ -1,6 +1,6 @@
 # Web Bluetooth Example
 
-ChromeのWeb Bluetooth機能を使ってBluetooth Low Energyデバイスを操作する簡単なサンプルプログラム。
+ChromeのWeb Bluetooth機能を使ってBluetooth Low Energyデバイスを操作する簡単なサンプルプログラム。ユカイ工学さんのKonashiを使った例です。
 
 ![](./images/webble1.png)
 
@@ -28,3 +28,8 @@ Angular Routeを使っているので何らかのHTTPサーバーにデプロイ
 
     $ cd プロジェクトディレクトリ
     $ python3 -m http.server
+
+## 参考情報
+
+- [Web Bluetooth API](https://webbluetoothcg.github.io/web-bluetooth/)
+- [Konashi](http://konashi.ux-xu.com/documents/)
