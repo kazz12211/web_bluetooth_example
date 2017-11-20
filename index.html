@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>Bluejelly Test</title>
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/component.css">
+<link rel="stylesheet" href="css/ngDialog.css" type="text/css">
+<link rel="stylesheet" href="css/ngDialog-theme-default.css" type="text/css">
+<script src="scripts/jquery-2.1.1.min.js"></script>
+<script src="scripts/bootstrap.min.js"></script>
+<script src="scripts/angular.min.js"></script>
+<script src="scripts/angular-route.min.js"></script>
+<script src="scripts/angular-touch.min.js"></script>
+<script src="scripts/ui-bootstrap-tpls-2.5.0.min.js"></script>
+<script src="scripts/ngDialog.js"></script>
+<script src="scripts/app.js"></script>
+<script src="scripts/HomeController.js"></script>
+<script src="scripts/KonashiBlinkController.js"></script>
+<style type="text/css">
+[ng\:cloak], [ng-cloak], .ng-cloak {
+	display: none !important;
+}
+</style>
+<base href="/">
+</head>
+
+<body ng-app="app" ng-cloak class="ng-cloak">
+	<nav class="navbar navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="/">Bluetooth Test</a>
+			</div>
+			<ul class="nav navbar-nav navbar-right" style="position:absolute;top:0px;right:8px">
+				<li><a id="menu-toggle" href="#"><span
+						class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span></a></li>
+			</ul>
+		</div>
+	</nav>
+
+	<div class="container">
+		<div id="wrapper">
+			<!-- sidebar-wrapper -->
+			<div id="sidebar-wrapper">
+				<div id="sidebar-nav">
+					<ul class="sidebar-nav">
+						<li><a onclick='$("#wrapper").toggleClass("toggled", false);' href='/'>ホーム</a>
+						<li><a onclick='$("#wrapper").toggleClass("toggled", false);' href='/scan/'>デバイスのスキャン</a>
+					</ul>
+				</div>
+			</div>
+			<!-- /sidebar-wrapper -->
+			<!-- page-content-wrapper -->
+			<div id="page-content-wrapper">
+				<div ng-view></div>
+			</div>
+		</div>
+	</div>
+	<script>
+		$("#menu-toggle").click(function(e) {
+			e.preventDefault();
+			$("#wrapper").toggleClass("toggled");
+		});
+		$("#page-content-wrapper").click(function(e) {
+			e.preventDefault();
+			$("#wrapper").toggleClass("toggled", false);
+		});
+	</script>
+</body>
+</html>
