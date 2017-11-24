@@ -22,9 +22,9 @@ ChromeのExperimental Web Platform featuresを有効にしてください。-> c
 
 Web Bluetooth機能を使用しているのはKonashiBlinkController.jsの中にあります。その中でデバイス検索->デバイスに接続->サービスの取得->キャラクタりスティックの取得->キャラクタりスティックへの出力（LED点滅）を行なっています。
 
-簡単なプログラムなのに多くのJavaScriptライブラリやソースファイルがあるのは、普段使っているWebアプリケーションのテンプレートを使用しているためですので、Web Bluetoothの機能だけに関心がある場合はKonashiBlinkController.jsのblink.htmlだけ見れば良いと思います。
+簡単なプログラムの割に多くのJavaScriptライブラリやソースファイルがあるのは、普段使っているWebアプリケーションのテンプレートを使用しているためですので、Web Bluetoothの機能だけに関心がある場合はKonashiBlinkController.jsのblink.htmlだけ見てください。
 
-Angular Routeを使っているので何らかのHTTPサーバーにデプロイしないと正常に動作しません。一番簡単な方法はPythonのHTTPサーバーを使うことです。プロジェクトのディレクトに移動して以下のコマンドを実行すればPythonのHTTPサーバーを使ってこのアプリケーションを動かせます。
+Angular Routeを使っているので何らかのHTTPサーバーにデプロイしないと正常に動作しません。一番簡単な方法はPythonのHTTPサーバーを使うことです。プロジェクトのディレクトに移動して以下のコマンドを実行すればPythonのHTTPサーバーを使ってこのアプリケーションを動かせます。（Python 3を使った場合）
 
     $ cd プロジェクトディレクトリ
     $ python3 -m http.server
